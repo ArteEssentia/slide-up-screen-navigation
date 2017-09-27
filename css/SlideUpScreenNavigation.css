@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* link to some fonts */
+@import url(http://fonts.googleapis.com/css?family=Hammersmith+One);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+/* include padding and the border in the box dimensions */
+* {
+	box-sizing: border-box;
+}
+
+/* generic styling of both html and body */
+/* by not declaring a font-size, we give the user more control */
+/* font-size will be inherited from user client setings */
+html, body {
+	display: block;
+	background: #000000;
+	color: #ffffff;
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+}
+
+/* navigation must always be visible at the same spot - here top left */
+nav {
+	position: absolute;
+	left: 1em;
+	top: 1em;
+	z-index: 9999;
+}
+
+/* the header above the menu links */
+nav h1 {
+	font-family: 'Hammersmith One', sans-serif;
+	color: #ffffff;
+	font-size: 1.5rem;
+}
+
+/* style the clickable links in nav */
+nav a {
+	font-size: 1rem;
+	display: block;
+	color: #ffffff;
+	margin-bottom: 0.5em;
+}
+
+/* define the size of the main content area and center it on the page */
+main {
+	display: block;
+	width: 65%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden; /* we do not want any content to stretch our box vertically */
+}
+
+/* the panels */
+/* the transition happens when a visible panel no longer is targeted */
+article {
+	position: absolute;
+	display: block;
+	width: 65%;
+	height: 100%;
+	top: -100%;
+	opacity: 0; /* each panel starts with full transparency */
+	background: #cccccc;
+	border: 0;
+	transition: top 1s, opacity 1s, border 1s;
+	overflow: auto;
+}
+
+/* the current panel becomes visible */
+article:target {
+	opacity: 1;
+	top: 0;
+	border: 5px solid #ffffff;
+	background: #000000;
+}
+
+/* header styles */
+article h2 {
+	font-family: 'Hammersmith One', sans-serif;
+	color: #ffffff;
+	font-size: 2rem;
+	margin: 1.5rem 2rem;
+}
+
+/* image styling */
+article img {
+	max-width: 80%;
+	border: 1px solid #ffffff;
+}
+
+/* paragraph styling */
+article p {
+	margin: 1.5rem 2rem;
+	line-height: 1.3em;
+}
