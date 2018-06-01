@@ -27,4 +27,4 @@ The articles (panels) start out invisble and become visible only when targeted b
 
 The CSS is heavily commented to explain the individual rules.
 
-## [Take a look at the live working version of this demo](https://arteessentia.github.io/slide-up-screen-navigation/)
+## [Take a look at the live working version of this demo](https://VincentKlijn.github.io/slide-up-screen-navigation/)
